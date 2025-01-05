@@ -1,9 +1,8 @@
 
-import { createMuiTheme, TextField, ThemeProvider } from "@material-ui/core";
+import { createMuiTheme, TextField, ThemeProvider, MenuItem } from "@mui/material";
 import React from "react";
 import "./header.css";
 import countries from "../../data/languages";
-import MenuItem from "@material-ui/core/MenuItem";
 const Header = ({
   setCategory, category, word, setWord
 }) => {

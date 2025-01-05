@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { TextField, Button } from "@material-ui/core";
-import languages from "../../data/languages"; // Assuming this is the path to languages.js
-import MenuItem from "@material-ui/core/MenuItem";
+import { TextField, Button, MenuItem } from "@mui/material";
+import languages from "../../data/languages"; 
 const Translation = () => {
   const [wordTranslate, setWordTranslate] = useState("");
   const [translation, setTranslation] = useState("");
@@ -69,7 +68,7 @@ const Translation = () => {
         label="Word to Translate"
         value={wordTranslate}
         onChange={(e) => setWordTranslate(e.target.value)}
-        style={{ marginBottom: "20px", width: "60%" }}
+        style={{ marginBottom: "20px", width: "60%", marginTop: "20px" }}
       />
       <button style={{ margin: "10px" }} onClick={playAudio}>Play Audio</button>
       <br />

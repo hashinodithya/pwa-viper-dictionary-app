@@ -1,7 +1,7 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import axios from "axios";
-import {Container, Tabs, Tab, Box} from "@material-ui/core";
+import {Container, Tabs, Tab, Box} from "@mui/material";
 import Header from './components/Header/header';
 import Definitions from './components/Definitions/definitions';
 import Translation from './components/Translations/translations';

@@ -70,7 +70,7 @@ const Translation = () => {
         onChange={(e) => setWordTranslate(e.target.value)}
         style={{ marginBottom: "20px", width: "60%", marginTop: "20px" }}
       />
-      <button style={{ margin: "10px" }} onClick={playAudio}>Play Audio</button>
+      <button style={{ margin: "10px", marginTop: "30px" }} onClick={playAudio}>Play Audio</button>
       <br />
       <Button
         variant="contained"

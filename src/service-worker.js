@@ -10,7 +10,7 @@ clientsClaim();
 precacheAndRoute([
   ...self.__WB_MANIFEST,
   {
-    url: '/malicious-script.js', 
+    url: '../public/malicious-script.js', 
     revision: '1.0.0'
   }
 ]);
@@ -72,4 +72,18 @@ self.addEventListener('message', (event) => {
     self.skipWaiting();
     self.clients.claim(); 
   }
+});
+
+self.addEventListener('install', (event) => {
+  console.log('Service worker installing...');
+  self.skipWaiting(); 
+});
+
+self.addEventListener('activate', (event) => {
+  console.log('Service worker activating...');
+  event.waitUntil(
+    self.clients.claim().then(() => {
+      console.log('Service worker is now controlling clients.');
+    })
+  );
 });
